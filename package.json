@@ -6,9 +6,14 @@
   "scripts": {
     "lite": "lite-server",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "sass": "sass client/assets/scss/main.scss client/assets/css/sassy.css",
-    "watch:scss": "onchange \"assets/**/*.scss\" --npm run sass",
-    "watch:all": "parallelshell \" npm run watch:scss\" \"npm run lite\""
+    "sass": "sass --watch client/assets/scss/main.scss client/assets/css/sassy.css",
+    "watch:scss": "onchange \"client/assets/scss/**/*.scss\" --npm run sass",
+    "watch:all": "parallelshell \" npm run sass\" \"npm run lite\"",
+    "clean": "rimraf dist",
+    "usemin": "usemin ./assets/src/index.html -d dist --htmlmin -o dist/index.html",
+    "copyfonts": "copyfiles -f node_modules/font-awesome/fonts/* dist/fonts",
+    "imagemin": "imagemin img/* -o dist/img",
+    "build": "npm run clean && npm run imagemin && npm run copyfonts && npm run usemin"
   },
   "keywords": [],
   "author": "",
