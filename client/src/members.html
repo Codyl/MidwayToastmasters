@@ -18,55 +18,16 @@
     <!-- endbuild -->
   </head>
   <body>
-    <nav class="navbar navbar-expand-sm navbar-dark bg-tm fixed-top">
-      <a href="./index.html" class="navbar-brand">Midway Toastmasters</a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbar-target"
-        aria-controls="navbar-target"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbar-target">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a href="./about.html" class="nav-link"
-              >About <span class="sr-only"></span
-            ></a>
-          </li>
-          <li class="nav-item active">
-            <a href="./members.html" class="nav-link"
-              >Members <span class="sr-only">(current)</span></a
-            >
-          </li>
-          <li class="nav-item">
-            <a href="./highlights.html" class="nav-link"
-              >Highlights <span class="sr-only"></span
-            ></a>
-          </li>
-          <li class="nav-item d-flex justify-content-between">
-            <i class="fa fa-meetup" aria-hidden="true"></i>
-            <i class="fa fa-twitter-square" aria-hidden="true"></i>
-            <i class="fa fa-youtube-square" aria-hidden="true"></i>
-            <i class="fa fa-facebook-square" aria-hidden="true"></i>
-            <i class="fa fa-linkedin-square" aria-hidden="true"></i>
-          </li>
-        </ul>
-      </div>
-    </nav>
     <main>
+      <div id="includedContent"></div>
       <div class="container">
-        <h1 class="title">Members</h1>
+        <h1 class="">Members</h1>
         <div class="media p-3 mt-5">
-            <img
-              src="../assets/images/members/rick.jpg"
-              alt=""
-              class="img-responsive img-member"
-            />
+          <img
+            src="../assets/images/members/rick.jpg"
+            alt=""
+            class="img-responsive img-member"
+          />
           <div class="media-body px-3">
             <h1 class="name">Rick Seebree</h1>
             <div role="doc-subtitle" class="mb-4">President</div>
@@ -95,7 +56,9 @@
           />
           <div class="media-body px-3">
             <h1 class="name">Charlie Monette</h1>
-            <div role="doc-subtitle" class="mb-4">Vice President of Education</div>
+            <div role="doc-subtitle" class="mb-4">
+              Vice President of Education
+            </div>
             <p class="jumbotron">
               A retired electrical engineer and professional flight instructor
               living in Versailles. As a small business owner for 44 years, I
@@ -115,7 +78,9 @@
           />
           <div class="media-body px-3">
             <h1 class="name">Arlynn</h1>
-            <div role="doc-subtitle" class="mb-4">Vice President of Membership</div>
+            <div role="doc-subtitle" class="mb-4">
+              Vice President of Membership
+            </div>
             <p class="jumbotron">
               I love that at Midway Toastmasters we have fun! Our members are
               active. We DO IT! No matter who you need to communicate with, life
@@ -133,7 +98,9 @@
           />
           <div class="media-body px-3">
             <h1 class="name">Izzy House</h1>
-            <div role="doc-subtitle" class="mb-4">Vice President of Public Relations</div>
+            <div role="doc-subtitle" class="mb-4">
+              Vice President of Public Relations
+            </div>
             <p class="jumbotron">
               Izzy House has been in marketing and public affairs for over 20
               years. She is passionate about her career and aerospace. She has
@@ -354,9 +321,13 @@
     </main>
 
     <!-- jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins.-->
-    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
-    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
-    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-
+    <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../../node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script>
+      $(function () {
+        $("#includedContent").load("navigation.html");
+      });
+    </script>
   </body>
 </html>

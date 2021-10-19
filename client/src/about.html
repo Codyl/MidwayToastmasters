@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Midway Toastmasters</title>
 
-
     <!-- build:css css/main.css -->
     <link
       rel="stylesheet"
@@ -17,47 +16,9 @@
     <link rel="stylesheet" href="../assets/css/sassy.css" />
     <link rel="stylesheet" href="../assets/css/style.css" />
     <!-- endbuild -->
-
   </head>
   <body>
-    <nav class="navbar navbar-expand-sm navbar-dark bg-tm fixed-top">
-      <a href="./index.html" class="navbar-brand">Midway Toastmasters</a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbar-target"
-        aria-controls="navbar-target"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbar-target">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-            <a href="#" class="nav-link">About <span class="sr-only"></span></a>
-          </li>
-          <li class="nav-item">
-            <a href="./members.html" class="nav-link"
-              >Members <span class="sr-only">(current)</span></a
-            >
-          </li>
-          <li class="nav-item">
-            <a href="./highlights.html" class="nav-link"
-              >Highlights <span class="sr-only"></span
-            ></a>
-          </li>
-          <li class="nav-item d-flex justify-content-between">
-            <i class="fa fa-meetup" aria-hidden="true"></i>
-            <i class="fa fa-twitter-square" aria-hidden="true"></i>
-            <i class="fa fa-youtube-square" aria-hidden="true"></i>
-            <i class="fa fa-facebook-square" aria-hidden="true"></i>
-            <i class="fa fa-linkedin-square" aria-hidden="true"></i>
-          </li>
-        </ul>
-      </div>
-    </nav>
+    <div id="includedContent"></div>
     <main class="container">
       <h1 class="mt-5 pt-5">About</h1>
       <div class="jumbotron">
@@ -65,8 +26,8 @@
         <blockquote class="blockquote">
           <p class="mb-0">
             "We provide a supportive and positive learning experience in which
-            members are empowered to develop communication and leadership skills,
-            resulting in greater self-confidence and personal growth."
+            members are empowered to develop communication and leadership
+            skills, resulting in greater self-confidence and personal growth."
           </p>
         </blockquote>
       </div>
@@ -103,9 +64,14 @@
     </main>
 
     <!-- jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins.-->
-    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
-    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
-    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-
+    <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../../node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script>
+      $(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+        $("#includedContent").load("navigation.html");
+      });
+    </script>
   </body>
 </html>

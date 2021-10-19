@@ -18,53 +18,20 @@
     <!-- endbuild -->
   </head>
   <body>
-    <nav class="navbar navbar-expand-sm navbar-dark bg-tm fixed-top">
-      <a href="./index.html" class="navbar-brand">Midway Toastmasters</a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbar-target"
-        aria-controls="navbar-target"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbar-target">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a href="./about.html" class="nav-link">About <span class="sr-only"></span></a>
-          </li>
-          <li class="nav-item">
-            <a href="./members.html" class="nav-link"
-              >Members <span class="sr-only">(current)</span></a
-            >
-          </li>
-          <li class="nav-item active">
-            <a href="#" class="nav-link"
-              >Highlights <span class="sr-only"></span
-            ></a>
-          </li>
-          <li class="nav-item d-flex justify-content-between">
-            <i class="fa fa-meetup" aria-hidden="true"></i>
-            <i class="fa fa-twitter-square" aria-hidden="true"></i>
-            <i class="fa fa-youtube-square" aria-hidden="true"></i>
-            <i class="fa fa-facebook-square" aria-hidden="true"></i>
-            <i class="fa fa-linkedin-square" aria-hidden="true"></i>
-          </li>
-        </ul>
-      </div>
-    </nav>
+    <div id="includedContent"></div>
     <main>
       <h1>Highlights</h1>
       <div class="media d-flex justify-content-center">
-        <img src="../assets/images/icons/arrow.png" class="btn" alt="">
+        <img src="../assets/images/icons/arrow.png" class="btn" alt="" />
         <h2>October 11, 2021</h2>
-        <img src="../assets/images/icons/arrow.png" class="btn" style="transform: rotateZ(180deg);" alt="">
+        <img
+          src="../assets/images/icons/arrow.png"
+          class="btn"
+          style="transform: rotateZ(180deg)"
+          alt=""
+        />
       </div>
       <div class="container">
-        
         <summary>
           We had a wonderful meeting with few tech issues. Our speakers were
           wonderful!
@@ -77,19 +44,37 @@
           />
           <div class="media-body px-3">
             <h1 class="name">Charlie Monette</h1>
-            <div role="doc-subtitle" class="mb-4">Vice President of Education</div>
-            <p class="jumbotron">
-              Gave a speech about his skiing tornaments
-            </p>
+            <div role="doc-subtitle" class="mb-4">
+              Vice President of Education
+            </div>
+            <p class="jumbotron">Gave a speech about his skiing tornaments</p>
+          </div>
+        </div>
+        <div class="media p-3 mt-5">
+          <img
+            src="../assets/images/members/megan.jpg"
+            alt=""
+            class="img-responsive img-member"
+          />
+          <div class="media-body px-3">
+            <h1 class="name">Charlie Monette</h1>
+            <div role="doc-subtitle" class="mb-4">
+              Vice President of Education
+            </div>
+            <p class="jumbotron">Gave a speech about Zumba</p>
           </div>
         </div>
       </div>
     </main>
 
     <!-- jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins.-->
-    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
-    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
-    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-
+    <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../../node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script>
+      $(function () {
+        $("#includedContent").load("navigation.html");
+      });
+    </script>
   </body>
 </html>

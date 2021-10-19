@@ -2,7 +2,7 @@
   <a href="https://www.toastmasters.org/" class=".d-none .d-lg-block"
     ><img class="tm" src="../assets/images/icons/toastmasters.png" alt=""
   /></a>
-  <a href="#" class="navbar-brand"> Midway Toastmasters</a>
+  <a href="./index.html" class="navbar-brand"> Midway Toastmasters</a>
   <button
     class="navbar-toggler"
     type="button"
@@ -16,17 +16,17 @@
   </button>
   <div class="collapse navbar-collapse" id="navbar-target">
     <ul class="navbar-nav ml-auto">
-      <li class="nav-item">
+      <li class="nav-item" id="about">
         <a href="./about.html" class="nav-link"
           >About <span class="sr-only"></span
         ></a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item" id="members">
         <a href="./members.html" class="nav-link"
           >Members <span class="sr-only"></span
         ></a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item" id="highlights">
         <a href="./highlights.html" class="nav-link"
           >Highlights <span class="sr-only"></span
         ></a>
@@ -37,7 +37,7 @@
           role="button"
           data-target="#reserveModal"
           data-toggle="modal"
-          >RequestInfo<i class="fa fa-profile"></i
+          >Contact<i class="fa fa-profile"></i
         ></a>
       </li>
       <li class="nav-item d-flex d-sm-none justify-content-around">
@@ -50,3 +50,65 @@
     </ul>
   </div>
 </nav>
+<div class="modal fade" role="dialog" id="reserveModal">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header bg-info text-white">
+        <h3 class="modal-title">Request more information</h3>
+        <button class="close" type="button" data-dismiss="modal">
+          &times;
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="container-fluid">
+          <form>
+            <div class="row">
+              <div class="col form-group">
+                <input type="text" class="form-control" placeholder="Name" />
+              </div>
+            </div>
+            <div class="row">
+              <div class="col form-group">
+                <input
+                  class="form-control"
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Email"
+                />
+              </div>
+            </div>
+            <div class="row">
+              <div class="col form-group">
+                <textarea
+                  class="form-control"
+                  id="message"
+                  name="message"
+                  rows="3"
+                  placeholder="Message"
+                ></textarea>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <button class="btn btn-dark" data-dismiss="modal" type="submit">
+                  Cancel
+                </button>
+                <button class="btn btn-info" type="submit">Send Request</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  //Get path
+  const path = window.location.pathname.split("/");
+  const pathLength = path.length;
+  const page = path[pathLength - 1];
+  const pageNameWithoutFileEnding = page.substring(0, page.indexOf("."));
+  const pageNavElem = document.querySelector(`#${pageNameWithoutFileEnding}`);
+  pageNavElem?.classList.add("active");
+</script>
