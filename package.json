@@ -12,6 +12,8 @@
     "clean": "rimraf dist",
     "usemin": "usemin client/src/index.html -d dist --htmlmin -o dist/index.html",
     "copyfonts": "copyfiles -f node_modules/font-awesome/fonts/* dist/fonts",
+    "copyquery": "copyfiles -f node_modules/jquery/dist/jquery.min.js dist/query",
+    "copypopper": "copyfiles -f node_modules/popper.js/dist/umd/popper.min.js dist/popper",
     "imagemin": "imagemin client/assets/images/**/* -o dist/img",
     "build": "npm run clean && npm run imagemin && npm run copyfonts && npm run usemin"
   },
