@@ -1,6 +1,12 @@
-html { font-size: 62.5%; } /* =10px */
-body { font-size: 1.4rem; } /* =14px */
-h1   { font-size: 2.4rem; } /* =24px */
+html {
+  font-size: 62.5%;
+} /* =10px */
+body {
+  font-size: 1.4rem;
+} /* =14px */
+h1 {
+  font-size: 2.4rem;
+} /* =24px */
 main {
   width: auto;
   /* height: 100vh; */
@@ -26,7 +32,10 @@ main {
 .bg-transparent {
   background-color: transparent;
 }
-.nav-link, .navbar-brand, .date, .title {
+.nav-link,
+.navbar-brand,
+.date,
+.title {
   font-size: 2rem;
 }
 
@@ -68,4 +77,11 @@ main {
 
 .tm {
   width: 70%;
+}
+
+#floor-icons {
+  bottom: 10px;
+  width: 200px;
+  left: unset;
+  right: -100px;
 }
