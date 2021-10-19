@@ -7,12 +7,12 @@
     "lite": "lite-server",
     "test": "echo \"Error: no test specified\" && exit 1",
     "sass": "sass --watch client/assets/scss/main.scss client/assets/css/sassy.css",
-    "watch:scss": "onchange \"client/assets/scss/**/*.scss\" --npm run sass",
+    "watch:scss": "onchange \"client/assets/scss/**/*.scss\" -- npm run sass",
     "watch:all": "parallelshell \" npm run sass\" \"npm run lite\"",
     "clean": "rimraf dist",
-    "usemin": "usemin ./assets/src/index.html -d dist --htmlmin -o dist/index.html",
+    "usemin": "usemin client/src/index.html -d dist --htmlmin -o dist/index.html",
     "copyfonts": "copyfiles -f node_modules/font-awesome/fonts/* dist/fonts",
-    "imagemin": "imagemin img/* -o dist/img",
+    "imagemin": "imagemin client/assets/images/**/* -o dist/img",
     "build": "npm run clean && npm run imagemin && npm run copyfonts && npm run usemin"
   },
   "keywords": [],
@@ -21,11 +21,17 @@
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.4",
     "bootstrap": "^4.6.0",
+    "copyfiles": "^2.4.1",
     "fontawesome": "^4.7.0",
+    "imagemin": "^8.0.1",
+    "imagemin-cli": "^7.0.0",
     "jquery": "^3.5.1",
     "onchange": "^7.0.0",
     "parallelshell": "^3.0.1",
-    "popper.js": "^1.16.1"
+    "popper.js": "^1.16.1",
+    "rimraf": "^3.0.2",
+    "usemin": "^0.6.0",
+    "usemin-cli": "^0.6.0"
   },
   "devDependencies": {
     "lite-server": "^2.6.1",
