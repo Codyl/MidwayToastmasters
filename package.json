@@ -10,7 +10,7 @@
     "watch:scss": "onchange \"client/assets/scss/**/*.scss\" -- npm run sass",
     "watch:all": "parallelshell \" npm run sass\" \"npm run lite\"",
     "clean": "rimraf dist",
-    "usemin": "usemin client/src/index.html -d dist --htmlmin -o dist/index.html",
+    "usemin": "usemin client/src/index.html -d dist --htmlmin -o dist/index.html && usemin client/src/about.html -d dist --htmlmin -o dist/about.html && usemin client/src/navigation.html -d dist --htmlmin -o dist/navigation.html && usemin client/src/agenda.html -d dist --htmlmin -o dist/agenda.html && usemin client/src/highlights.html -d dist --htmlmin -o dist/highlights.html && usemin client/src/members.html -d dist --htmlmin -o dist/members.html && usemin client/src/profile.html -d dist --htmlmin -o dist/profile.html && usemin client/src/roles.html -d dist --htmlmin -o dist/roles.html",
     "copyfonts": "copyfiles -f node_modules/font-awesome/fonts/* dist/fonts",
     "copyquery": "copyfiles -f node_modules/jquery/dist/jquery.min.js dist/query",
     "copypopper": "copyfiles -f node_modules/popper.js/dist/umd/popper.min.js dist/popper",

@@ -24,7 +24,7 @@ main {
 .btn-t {
   background-color: transparent;
   border: 5px solid black;
-  color: white;
+  color: black;
   border-radius: 15px;
   font-size: large;
   width: 10em;
@@ -48,10 +48,18 @@ main {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  background-image: url("../images/placeholder2.png");
+  background-image: url("../images/placeholder.jpg");
   background-repeat: no-repeat;
   /* min-height: 100%;
   max-height: 100%; */
+}
+@media only screen and (max-width: 1000px) {
+  .bg-home {
+    background-image: url("../images/placeholder2.png");
+  }
+  .btn-t {
+    color: white;
+  }
 }
 .mx-abs {
   position: absolute;
@@ -69,11 +77,9 @@ main {
 }
 .img-reason {
   width: 10%;
-  height: 10%;
+
 }
-.show {
-  background-color: #103056;
-}
+
 
 .tm {
   width: 70%;
@@ -92,4 +98,7 @@ h1 {
 
 i.fa, i.fab {
   cursor: pointer;
+}
+.inline {
+  display: inline;
 }
