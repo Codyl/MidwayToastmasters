@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-home">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Midway Toastmasters</title>
+    <!-- <link rel="shortcut icon" href="./assets/images/icons/toastmasters.png" type="image/x-icon"> -->
+
+
+    <!-- build:css css/main.css -->
+    <link
+      rel="stylesheet"
+      href="./node_modules/font-awesome/css/font-awesome.min.css"
+    />
+
+    <!-- Additional CSS must be placed after Bootstrap CSS -->
+    <link rel="stylesheet" href="./assets/css/sassy.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <!-- endbuild -->
+
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-tm fixed-top">
+      <a href="https://www.toastmasters.org/" class=".d-none .d-lg-block"><img class="tm"
+          src="./assets/images/icons/toastmasters.png" alt="" /></a>
+      <a href="./index.html" class="navbar-brand d-none d-sm-block"> Midway Toastmasters</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-target"
+        aria-controls="navbar-target" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbar-target">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item" id="about">
+            <a href="./about.html" class="nav-link">About <span class="sr-only"></span></a>
+          </li>
+          <li class="nav-item" id="members">
+            <a href="./members.html" class="nav-link">Members <span class="sr-only"></span></a>
+          </li>
+          <li class="nav-item" id="highlights">
+            <a href="./highlights.html" class="nav-link">Highlights <span class="sr-only"></span></a>
+          </li>
+          <li class="nav-item" id="profile">
+            <a href="./profile.html" class="nav-link">Profile <span class="sr-only"></span></a>
+          </li>
+          <li class="nav-item d-flex d-sm-none justify-content-around">
+            <i class="fab fa-meetup fa-2x" aria-hidden="true"></i>
+            <i class="fab fa-twitter fa-2x" aria-hidden="true"></i>
+            <i class="fab fa-youtube fa-2x" aria-hidden="true"></i>
+            <i class="fab fa-facebook fa-2x" aria-hidden="true"></i>
+            <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="modal fade" role="dialog" id="reserveModal">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header bg-info text-white">
+            <h3 class="modal-title">Request more information</h3>
+            <button class="close" type="button" data-dismiss="modal">
+              &times;
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="container-fluid">
+              <form name="contact" method="POST" data-netlify="true">
+                <div class="row">
+                  <div class="col form-group">
+                    <input type="text" class="form-control" placeholder="Name" />
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col form-group">
+                    <input class="form-control" type="email" id="email" name="email" placeholder="Email" />
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col form-group">
+                    <textarea class="form-control" id="message" name="message" rows="3" placeholder="Message"></textarea>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <button class="btn btn-dark" data-dismiss="modal" type="submit">
+                      Cancel
+                    </button>
+                    <button class="btn btn-info" type="submit">Send Request</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <div id="includedContent"></div> -->
+    <main>
+      <a
+        href="https://zoom.us/j/455502545?pwd=cGJXUFVMK1RveFZkemZmYkxMb0x6dz09"
+        class="btn btn-t mx-abs"
+        style="bottom: 20vh"
+      >
+        <i class="fa fa-video" aria-hidden="true"></i> Join Meeting
+      </a>
+      <a href="./agenda.html" class="btn btn-t mx-abs" style="bottom: 30vh">
+        <i class="fa fa-calendar" aria-hidden="true"></i> Agenda
+      </a>
+      <span class="mx-abs text-white date" style="bottom: 50px"
+        >Next Meeting: October 11, 2021</span
+      >
+    </main>
+    <footer>
+      <div class="mx-abs"  id="floor-icons">
+        
+        <div class=" nav-item d-none d-sm-flex justify-content-around">
+          <i class="fab fa-meetup fa-2x" aria-hidden="true"></i>
+          <i class="fab fa-twitter fa-2x" aria-hidden="true"></i>
+          <i class="fab fa-youtube fa-2x" aria-hidden="true"></i>
+          <i class="fab fa-facebook fa-2x" aria-hidden="true"></i>
+          <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
+        </div>
+      </div>
+    </footer>
+<!-- build:js js/main.js -->
+    <!-- jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins.-->
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="./node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <script>
+      $(function(){
+      $("#includedContent").load("navigation.html"); 
+    }); 
+    </script>
+    <!-- endbuild -->
+  </body>
+</html>

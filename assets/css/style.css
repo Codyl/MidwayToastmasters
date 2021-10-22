@@ -1,0 +1,106 @@
+html {
+  font-size: 62.5%;
+} /* =10px */
+body {
+  font-size: 1.4rem;
+  background-color: grey;
+} /* =14px */
+h1 {
+  font-size: 2.4rem;
+} /* =24px */
+main {
+  width: auto;
+  /* height: 100vh; */
+}
+.fab {
+  color: white;
+}
+
+/* .navbar {
+  height: 3.6rem;
+} */
+/* .navbar {
+  width: 100;
+} */
+.btn-t {
+  background-color: transparent;
+  border: 5px solid black;
+  color: black;
+  border-radius: 15px;
+  font-size: large;
+  width: 10em;
+}
+.bg-transparent {
+  background-color: transparent;
+}
+.nav-link,
+.navbar-brand,
+.date,
+.title {
+  font-size: 2rem;
+}
+
+.bg-tm {
+  background-color: #103056;
+  width: 100%;
+}
+
+.mx-abs {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+.date {
+  width: 400px;
+  text-align: center;
+}
+.img-member {
+  width: 10em;
+}
+.img-reason {
+  width: 10%;
+
+}
+
+
+.tm {
+  width: 70%;
+}
+
+#floor-icons {
+  bottom: 10px;
+  width: 200px;
+  left: unset;
+  right: -100px;
+}
+
+h1 {
+  margin-top: 60px;
+}
+
+i.fa, i.fab {
+  cursor: pointer;
+}
+.inline {
+  display: inline;
+}
+blockquote {
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+blockquote:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+blockquote p {
+  display: inline;
+  font-size: 2em;
+}

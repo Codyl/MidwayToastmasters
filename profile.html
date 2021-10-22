@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Midway Toastmasters</title>
+
+    <!-- build:css css/main.css -->
+    <link
+      rel="stylesheet"
+      href="node_modules/@fortawesome/fontawesome-free/css/all.min.css"
+    />
+
+    <!-- Additional CSS must be placed after Bootstrap CSS -->
+<link rel="stylesheet" href="./assets/css/sassy.css" />
+<link rel="stylesheet" href="./assets/css/style.css" />
+    <!-- endbuild -->
+  </head>
+  <body>
+    <div id="includedContent"></div>
+    <main class="container">
+      <h1>Profile</h1>
+      <h2>Cody Lillywhite</h2>
+      <div class="row">
+
+        <div class="col-sm-4">
+          <img
+            src=""
+            alt=""
+            style="background-color: grey"
+            width="200px"
+            height="200px"
+          />
+        </div>
+        <div class="col-sm-8">
+          <form class="px-5">
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email address</label>
+              <input
+                type="email"
+                class="form-control"
+                id="exampleInputEmail1"
+                aria-describedby="emailHelp"
+                placeholder="Enter email"
+              />
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Telephone</label>
+              <input
+                type="tel"
+                class="form-control"
+                id="exampleInputPassword1"
+                placeholder="Telephone"
+              />
+            </div>
+            <label for="bio">Bio</label>       
+            <textarea class="form-control" name="bio" id="" cols="30" rows="10" placeholder="Write your story"></textarea>
+            <button type="submit" class="btn btn-success my-4">Submit</button>
+          </form>
+        </div>
+      </div>
+    </main>
+<!-- build:js js/main.js -->
+    <!-- jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins.-->
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script>
+      $(function () {
+        $("#includedContent").load("navigation.html");
+      });
+    </script>
+    <!-- endbuild -->
+  </body>
+</html>
