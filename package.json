@@ -10,12 +10,13 @@
     "watch:scss": "onchange \"client/assets/scss/**/*.scss\" -- npm run sass",
     "watch:all": "parallelshell \" npm run sass\" \"npm run lite\"",
     "clean": "rimraf dist",
-    "usemin": "usemin client/src/index.html -d dist --htmlmin -o dist/index.html && usemin client/src/about.html -d dist --htmlmin -o dist/about.html && usemin client/src/navigation.html -d dist --htmlmin -o dist/navigation.html && usemin client/src/agenda.html -d dist --htmlmin -o dist/agenda.html && usemin client/src/highlights.html -d dist --htmlmin -o dist/highlights.html && usemin client/src/members.html -d dist --htmlmin -o dist/members.html && usemin client/src/profile.html -d dist --htmlmin -o dist/profile.html && usemin client/src/roles.html -d dist --htmlmin -o dist/roles.html",
-    "copyfonts": "copyfiles -f node_modules/font-awesome/fonts/* dist/fonts",
-    "copyquery": "copyfiles -f node_modules/jquery/dist/jquery.min.js dist/query",
-    "copypopper": "copyfiles -f node_modules/popper.js/dist/umd/popper.min.js dist/popper",
+    "makefiles": "mkdir dist && cd dist && mkdir src",
+    "usemin": "usemin client/src/index.html -d dist --htmlmin -o dist/src/index.html && usemin client/src/about.html -d dist --htmlmin -o dist/src/about.html && usemin client/src/navigation.html -d dist --htmlmin -o dist/src/navigation.html && usemin client/src/agenda.html -d dist --htmlmin -o dist/src/agenda.html && usemin client/src/highlights.html -d dist --htmlmin -o dist/src/highlights.html && usemin client/src/members.html -d dist --htmlmin -o dist/src/members.html && usemin client/src/profile.html -d dist --htmlmin -o dist/src/profile.html && usemin client/src/roles.html -d dist --htmlmin -o dist/src/roles.html",
+    "copyfonts": "copyfiles -f node_modules/font-awesome/fonts/* dist/node_modules/font-awesome/fonts/",
+    "copyquery": "copyfiles -f node_modules/jquery/dist/jquery.min.js dist/node_modules/jquery/dist/",
+    "copypopper": "copyfiles -f node_modules/popper.js/dist/umd/popper.min.js dist/node_modules/popper.js/dist/umd/",
     "imagemin": "imagemin client/assets/images/**/* -o dist/assets/images",
-    "build": "npm run clean && npm run imagemin && npm run copyfonts && npm run usemin"
+    "build": "npm run clean && npm run makefiles && npm run imagemin && npm run copyfonts && npm run usemin"
   },
   "keywords": [],
   "author": "",
