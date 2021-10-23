@@ -8,9 +8,9 @@
     "watch:scss": "onchange \"assets/scss/**/*.scss\" -- npm run sass",
     "watch:all": "parallelshell \" npm run sass\" \"npm run lite\"",
     "clean": "rimraf dist",
-    "usemin": "usemin index.html -d dist --htmlmin -o dist/index.html",
+    "usemin": "usemin index.html -d dist --htmlmin -o dist/index.html && usemin about.html -d dist --htmlmin -o dist/about.html && usemin agenda.html -d dist --htmlmin -o dist/agenda.html && usemin highlights.html -d dist --htmlmin -o dist/highlights.html && usemin members.html -d dist --htmlmin -o dist/members.html && usemin navigation.html -d dist --htmlmin -o dist/navigation.html && usemin profile.html -d dist --htmlmin -o dist/profile.html && usemin roles.html -d dist --htmlmin -o dist/roles.html",
     "copyfonts": "copyfiles -f node_modules/font-awesome/fonts/* dist/fonts/",
-    "imagemin": "imagemin assets/images/**/* -o dist/images",
+    "imagemin": "imagemin assets/images/* -o dist/images && imagemin favicon-16x16.png -o dist/",
     "build": "npm run clean && npm run imagemin && npm run copyfonts && npm run usemin"
   },
   "keywords": [],
