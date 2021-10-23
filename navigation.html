@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-md navbar-dark bg-tm fixed-top">
   <a href="https://www.toastmasters.org/" class=".d-none .d-lg-block"
-    ><img class="tm" src="../assets/images/icons/toastmasters.png" alt=""
+    ><img class="tm" src="../assets/images/toastmasters.png" alt=""
   /></a>
   <a href="./index.html" class="navbar-brand d-none d-sm-block"> Midway Toastmasters</a>
   <button
@@ -46,60 +46,8 @@
     </ul>
   </div>
 </nav>
-<div class="modal fade" role="dialog" id="reserveModal">
-  <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header bg-info text-white">
-        <h3 class="modal-title">Request more information</h3>
-        <button class="close" type="button" data-dismiss="modal">
-          &times;
-        </button>
-      </div>
-      <div class="modal-body">
-        <div class="container-fluid">
-          <form name="contact" method="POST" data-netlify="true">
-            <div class="row">
-              <div class="col form-group">
-                <input type="text" class="form-control" placeholder="Name" />
-              </div>
-            </div>
-            <div class="row">
-              <div class="col form-group">
-                <input
-                  class="form-control"
-                  type="email"
-                  id="email"
-                  name="email"
-                  placeholder="Email"
-                />
-              </div>
-            </div>
-            <div class="row">
-              <div class="col form-group">
-                <textarea
-                  class="form-control"
-                  id="message"
-                  name="message"
-                  rows="3"
-                  placeholder="Message"
-                ></textarea>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col">
-                <button class="btn btn-dark" data-dismiss="modal" type="submit">
-                  Cancel
-                </button>
-                <button class="btn btn-info" type="submit">Send Request</button>
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- <script>
+
+<script>
   //Get path
   const path = window.location.pathname.split("/");
   const pathLength = path.length;
@@ -107,4 +55,4 @@
   const pageNameWithoutFileEnding = page.substring(0, page.indexOf("."));
   const pageNavElem = document.querySelector(`#${pageNameWithoutFileEnding}`);
   pageNavElem?.classList.add("active");
-</script> -->
+</script>
