@@ -50,7 +50,7 @@ main {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  background-image: url("../images/placeholder.jpg");
+  background-image: url("..assets/images/placeholder.jpg");
   background-repeat: no-repeat;
   background-color: black;
 }
