@@ -50,13 +50,13 @@ main {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  background-image: url("..assets/images/placeholder.jpg");
+  background-image: url("../../assets/images/placeholder.jpg");
   background-repeat: no-repeat;
   background-color: black;
 }
 @media only screen and (max-width: 1000px) {
   .bg-index {
-    background-image: url("../images/placeholder2.png");
+    background-image: url("../../assets/images/placeholder2.png");
   }
   .btn-t {
     color: white;
