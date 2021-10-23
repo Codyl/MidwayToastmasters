@@ -12,7 +12,7 @@
     "copyfonts": "copyfiles -f node_modules/font-awesome/fonts/* dist/fonts/",
     "copyFavicon": "copyfiles -f site.webmanifest dist/ && copyfiles -f favicon-16x16.png dist/  && copyfiles -f apple-touch-icon.png dist/  && copyfiles -f favicon-32x32.png dist/ ",
     "imagemin": "imagemin assets/images/* -o dist/assets/images && imagemin favicon-16x16.png -o dist/ && imagemin android-chrome-256x256.png -o dist/ && imagemin android-chrome-192x192.png -o dist/",
-    "build": "npm run clean && npm run imagemin && npm run copyfonts && npm run usemin"
+    "build": "npm run clean && npm run imagemin && npm run copyfonts && npm run usemin && npm run copyFavicon"
   },
   "keywords": [],
   "author": "",
